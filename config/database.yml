@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  database: gamestracker_development
+  pool: 5
+  timeout: 5000
+  username: mrsdo
+  password: Palo5non!
+
+test:
+  adapter: sqlite3
+  database: db/gamestracker_test
+  pool: 5
+  timeout: 5000
+  username: mrsdo
+  password: Palo5non!
+
+production:
+  adapter: postgresql
+  database: gamestracker
+  pool: 5
+  timeout: 5000
+  username: mrsdo
+  password: Palo5non!
