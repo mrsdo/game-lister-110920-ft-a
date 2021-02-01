@@ -1,23 +1,11 @@
 development:
   adapter: postgresql
-  database: gamestracker_development
-  pool: 5
-  timeout: 5000
-  username: mrsdo
-  password: Palo5non!
-
-test:
-  adapter: sqlite3
-  database: db/gamestracker_test
-  pool: 5
-  timeout: 5000
-  username: mrsdo
-  password: Palo5non!
-
+  encoding: unicode
+  database: game-lister-development
+  pool: 2
 production:
   adapter: postgresql
-  database: gamestracker
+  encoding: unicode
   pool: 5
-  timeout: 5000
-  username: mrsdo
-  password: Palo5non!
+  host: <%= ENV['DATABASE_HOST'] %>
+  database: game-lister-production

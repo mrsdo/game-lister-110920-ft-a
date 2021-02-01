@@ -70,7 +70,7 @@ DELETE ROUTE
 
 ## What is the Sinatra Flow?
 
-Request -> Controller -> Query / Insert database -> redirect / render
+Request -> Controller -> Query / Insert database -> redirect / render (erb line)
 
 ## Models
 
@@ -79,3 +79,14 @@ Request -> Controller -> Query / Insert database -> redirect / render
 - title
 - release_date
 - genre
+
+belong to a user
+
+## User
+
+- username / email
+- password_digest (encrypted (bcrypt))
+
+has many games
+
+## Sessions (cookies (not choc chip))

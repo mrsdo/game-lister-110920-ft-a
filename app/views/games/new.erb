@@ -13,13 +13,36 @@
     <input id="genre" name="game[genre]" type="text" class="validate">
     <label for="genre">Genre</label>
   </div>
+  <div class="input-field">
+    <input id="image" name="game[image_url]" type="text" class="validate">
+    <label for="image">Image</label>
+  </div>
 
   <input type="submit" value="Create Game" class="btn indigo darken-3">
+</form>
+<h3 class="indigo-text darken-3">Add Game</h3>
+
+<form action="/games/add" method="post">
+  <div class="input-field">
+    <select name="game[id]">
+      <option value="" disabled selected>Select Game To Add</option>
+      <% Game.all.each do |game| %>
+        <option value="<%= game.id %>"><%= game.title %></option>
+      <% end %>
+    </select>
+    <label>Games</label>
+  </div>
+
+  <input type="submit" value="Add" class="btn green darken-3">
 </form>
 
 
 <script>
+  // this is a javascript comment.
+
+
   $(document).ready(function(){
     $('.datepicker').datepicker();
+    $('select').formSelect();
   });
 </script>
